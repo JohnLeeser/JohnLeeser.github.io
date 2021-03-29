@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>JavaMail | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Javamail简单使用1.加载jar包12345&lt;dependency&gt;           &lt;groupId&gt;com.sun.mail&lt;&#x2F;groupId&gt;           &lt;artifactId&gt;javax.mail&lt;&#x2F;artifactId&gt;           &lt;version&gt;1.6.2&lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaMail">
+<meta property="og:url" content="http://example.com/2021/03/30/JavaMail/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Javamail简单使用1.加载jar包12345&lt;dependency&gt;           &lt;groupId&gt;com.sun.mail&lt;&#x2F;groupId&gt;           &lt;artifactId&gt;javax.mail&lt;&#x2F;artifactId&gt;           &lt;version&gt;1.6.2&lt;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-29T19:21:58.000Z">
+<meta property="article:modified_time" content="2021-03-29T19:26:32.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaMail" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/30/JavaMail/" class="article-date">
+  <time class="dt-published" datetime="2021-03-29T19:21:58.000Z" itemprop="datePublished">2021-03-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      JavaMail
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Javamail简单使用"><a href="#Javamail简单使用" class="headerlink" title="Javamail简单使用"></a>Javamail简单使用</h1><h3 id="1-加载jar包"><a href="#1-加载jar包" class="headerlink" title="1.加载jar包"></a>1.加载jar包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">           &lt;groupId&gt;com.sun.mail&lt;&#x2F;groupId&gt;</span><br><span class="line">           &lt;artifactId&gt;javax.mail&lt;&#x2F;artifactId&gt;</span><br><span class="line">           &lt;version&gt;1.6.2&lt;&#x2F;version&gt;</span><br><span class="line">   &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="JavaMail-jar包下载地址"><a href="#JavaMail-jar包下载地址" class="headerlink" title="JavaMail jar包下载地址"></a><a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar">JavaMail jar包下载地址</a></h4><h4 id="maven仓库地址"><a href="#maven仓库地址" class="headerlink" title="maven仓库地址"></a><a target="_blank" rel="noopener" href="https://mvnrepository.com/artifact/com.sun.mail/javax.mail/1.6.2">maven仓库地址</a></h4><h3 id="2-使用的主要类"><a href="#2-使用的主要类" class="headerlink" title="2.使用的主要类"></a>2.使用的主要类</h3><ul>
+<li><h4 id="Session-类"><a href="#Session-类" class="headerlink" title="Session 类"></a>Session 类</h4></li>
+<li><h4 id="Message-类"><a href="#Message-类" class="headerlink" title="Message 类"></a>Message 类</h4></li>
+<li><h4 id="Transport-类"><a href="#Transport-类" class="headerlink" title="Transport 类"></a>Transport 类</h4><h3 id="3-发送一封邮件"><a href="#3-发送一封邮件" class="headerlink" title="3.发送一封邮件"></a>3.发送一封邮件</h3></li>
+</ul>
+<ol>
+<li><h4 id="设置session类"><a href="#设置session类" class="headerlink" title="设置session类"></a>设置session类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;加载props</span><br><span class="line">Properties prop &#x3D; new Properties();</span><br><span class="line">&#x2F;&#x2F;从文件中读取</span><br><span class="line">InputStreamReader inputStreamReader &#x3D; new InputStreamReader(UtilMail.class.getClassLoader().getResourceAsStream(&quot;mail.properties&quot;),&quot;GBK&quot;);</span><br><span class="line">&#x2F;&#x2F;或者在代码中设置</span><br><span class="line">props.setProperty(&quot;mail.smtp.host&quot;,&quot;smtp.163.com&quot;)；&#x2F;&#x2F;这里用163邮箱举例，不同的邮箱smtp服务器地址不同。</span><br><span class="line">props.setProperty(&quot;mail.smtp.auth&quot;,&quot;true&quot;)；</span><br><span class="line">props.setProperty(&quot;mail.transport.protocol&quot;,&quot;smtp&quot;)；</span><br><span class="line">Session session &#x3D; Session.getInstance(prop);</span><br><span class="line">&#x2F;&#x2F;mail.smtp.host是必须设置的。</span><br></pre></td></tr></table></figure>
+<h4 id="其他参数设置详见-javaMail官方文档"><a href="#其他参数设置详见-javaMail官方文档" class="headerlink" title="其他参数设置详见 javaMail官方文档"></a>其他参数设置详见 <a target="_blank" rel="noopener" href="https://github.com/javaee/javamail">javaMail官方文档</a></h4></li>
+<li><h4 id="设置Message类"><a href="#设置Message类" class="headerlink" title="设置Message类"></a>设置Message类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Message mimeMessage &#x3D; new MimeMessage(session);</span><br><span class="line">&#x2F;&#x2F;设置发送人的信息</span><br><span class="line">   mimeMessage.setFrom(new InternetAddress(xxx@xxx.com,&quot;xxx&quot;,&quot;UTF-8&quot;));</span><br><span class="line">&#x2F;&#x2F;设置发送的邮件正文</span><br><span class="line">   mimeMessage.setContent(&quot;正文&quot;,&quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);</span><br><span class="line">&#x2F;&#x2F;设置发送的邮件主题</span><br><span class="line">   mimeMessage.setSubject(&quot;主题&quot;,&quot;UTF-8&quot;);</span><br><span class="line">&#x2F;&#x2F;设置接受人邮件地址</span><br><span class="line">   mimeMessage.setRecipients(MimeMessage.RecipientType.TO,xxx@xxx.com);  </span><br><span class="line">&#x2F;&#x2F;设置发送时间</span><br><span class="line">mimeMessage.setSentDate(new Date());</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="设置Transport类"><a href="#设置Transport类" class="headerlink" title="设置Transport类"></a>设置Transport类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Transport.send(mimeMessage,&quot;xxx@xxx.com&quot;,&quot;这写发送邮箱的授权码&quot;);&#x2F;&#x2F;此为懒人写法,好用就行</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="4-代码示例"><a href="#4-代码示例" class="headerlink" title="4.代码示例"></a>4.代码示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">package util.utilmail;</span><br><span class="line"></span><br><span class="line">import javax.mail.MessagingException;</span><br><span class="line">import javax.mail.Session;</span><br><span class="line">import javax.mail.Transport;</span><br><span class="line">import javax.mail.internet.InternetAddress;</span><br><span class="line">import javax.mail.internet.MimeMessage;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.io.UnsupportedEncodingException;</span><br><span class="line">import java.util.Date;</span><br><span class="line">import java.util.Properties;</span><br><span class="line"></span><br><span class="line">public class UtilMail &#123;</span><br><span class="line">    private static Properties prop &#x3D; null;</span><br><span class="line">    private static Session session &#x3D;null;</span><br><span class="line">    private static MimeMessage mimeMessage &#x3D;null;</span><br><span class="line"></span><br><span class="line">    private static String sendAddress &#x3D; null;</span><br><span class="line">    private static String receiveAddress &#x3D; null;</span><br><span class="line">    private static String sendAddressPassword &#x3D; null;</span><br><span class="line">    private static String contentType &#x3D; null;</span><br><span class="line">    private static String subjectType &#x3D; null;</span><br><span class="line">    private static String sendNicknameType &#x3D; null;</span><br><span class="line">    private static String sendNickname &#x3D; null;</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        Properties properties &#x3D; new Properties();</span><br><span class="line">        prop &#x3D; new Properties();</span><br><span class="line">        try &#123;</span><br><span class="line">            InputStreamReader inputStreamReader &#x3D; new InputStreamReader(UtilMail.class.getClassLoader().getResourceAsStream(&quot;mail_user.properties&quot;),&quot;GBK&quot;);</span><br><span class="line">            InputStreamReader inputStreamReader1 &#x3D; new InputStreamReader(UtilMail.class.getClassLoader().getResourceAsStream(&quot;mail_connection.properties&quot;),&quot;GBK&quot;);</span><br><span class="line">            prop.load(inputStreamReader1);</span><br><span class="line">            properties.load(inputStreamReader);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        sendAddress &#x3D; properties.getProperty(&quot;sendAddress&quot;);</span><br><span class="line">        receiveAddress &#x3D; properties.getProperty(&quot;receiveAddress&quot;);</span><br><span class="line">        sendAddressPassword &#x3D; properties.getProperty(&quot;sendAddressPassword&quot;);</span><br><span class="line">        contentType &#x3D; properties.getProperty(&quot;contentType&quot;);</span><br><span class="line">        subjectType &#x3D; properties.getProperty(&quot;subjectType&quot;);</span><br><span class="line">        sendNicknameType &#x3D; properties.getProperty(&quot;sendNicknameType&quot;);</span><br><span class="line">        sendNickname &#x3D; properties.getProperty(&quot;sendNickname&quot;);</span><br><span class="line">        session &#x3D; Session.getInstance(prop);</span><br><span class="line">        mimeMessage &#x3D; new MimeMessage(session);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void sendMessage(String nickname,String subject,String content,String receiver) throws MessagingException, UnsupportedEncodingException &#123;</span><br><span class="line">        mimeMessage.setFrom(new InternetAddress(sendAddress,nickname,sendNicknameType));</span><br><span class="line">        mimeMessage.setContent(content,contentType);</span><br><span class="line">        mimeMessage.setSubject(subject,subjectType);</span><br><span class="line">        mimeMessage.setRecipients(MimeMessage.RecipientType.TO,receiver);</span><br><span class="line">        mimeMessage.setSentDate(new Date());</span><br><span class="line">        Transport.send(mimeMessage,sendAddress,sendAddressPassword);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void sendMessage(String subject,String content) throws MessagingException, UnsupportedEncodingException &#123;</span><br><span class="line">        mimeMessage.setFrom(new InternetAddress(sendAddress,sendNickname,sendNicknameType));</span><br><span class="line">        mimeMessage.setContent(content,contentType);</span><br><span class="line">        mimeMessage.setSubject(subject,subjectType);</span><br><span class="line">        mimeMessage.setRecipients(MimeMessage.RecipientType.TO,receiveAddress);</span><br><span class="line">        mimeMessage.setSentDate(new Date());</span><br><span class="line">        Transport.send(mimeMessage,sendAddress,sendAddressPassword);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>end</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/30/JavaMail/" data-id="ckmuzo0ls00038ypvbkmv41ja" data-title="JavaMail" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/30/JDBC_Template/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          JDBC_Template
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/30/HTTP_response/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">HTTP_response</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/30/Servlet_Response/">Servlet_Response</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/Servlet_Context/">Servlet_Context</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/Jedis/">Jedis</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/JDBC_Template/">JDBC_Template</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/JavaMail/">JavaMail</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
