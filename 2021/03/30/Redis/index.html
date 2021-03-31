@@ -28,7 +28,7 @@
 <meta property="og:description" content="基本操作 新建一个值: SET server:name &quot;fido&quot; 检查是否存在：EXISTS server:name&#x2F;*return 0 or 1*&#x2F; 查询值：GET server:name 删除值：DEL connection 原子地改变密锁的上的值1234INCR connectionDECR connectionINCRBY connection 10DECRBY c">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-03-29T19:06:55.000Z">
-<meta property="article:modified_time" content="2021-03-31T11:10:55.000Z">
+<meta property="article:modified_time" content="2021-03-31T11:17:40.000Z">
 <meta property="article:author" content="loner John">
 <meta name="twitter:card" content="summary">
 
@@ -205,7 +205,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-31 19:10:55" itemprop="dateModified" datetime="2021-03-31T19:10:55+08:00">2021-03-31</time>
+                <time title="Modified: 2021-03-31 19:17:40" itemprop="dateModified" datetime="2021-03-31T19:17:40+08:00">2021-03-31</time>
               </span>
 
           
@@ -256,7 +256,7 @@
 <h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><ul>
 <li>默认持久化：BDR<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*编辑redis.windows.conf文件*&#x2F;</span><br><span class="line">save 60 10 每60秒如果有10个键改变，持久化一次</span><br><span class="line">&#x2F;*启动服务器*&#x2F;</span><br><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></li>
 <li>AOF<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*编辑redis.windows.conf文件*&#x2F;</span><br><span class="line">appendonly yes 开启</span><br><span class="line">appendonly no 关闭</span><br><span class="line">appendfsync always 每次操作都持久化一次</span><br><span class="line">apppendfsync everysec 每隔一秒持久化一次</span><br><span class="line">appendfsync no 不进行持久化</span><br><span class="line">&#x2F;*启动服务器*&#x2F;</span><br><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure>
-<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2><h4 id="在Java中使用Redis详见-Jedis使用文档"><a href="#在Java中使用Redis详见-Jedis使用文档" class="headerlink" title="在Java中使用Redis详见 Jedis使用文档"></a>在Java中使用Redis详见 <a target="_blank" rel="noopener" href="https://johnleeser.github.io/2021/03/30/Jedis/">Jedis使用文档</a></h4></li>
+未完待续<br>在Java中使用Redis详见 <a target="_blank" rel="noopener" href="https://johnleeser.github.io/2021/03/30/Jedis/">Jedis使用文档</a></li>
 </ul>
 
     </div>
@@ -338,7 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-number">3.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E9%9B%86"><span class="nav-number">4.</span> <span class="nav-text">排序集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%EF%BC%88map%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">哈希（map）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E4%B9%85%E5%8C%96"><span class="nav-number">6.</span> <span class="nav-text">持久化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"><span class="nav-number">7.</span> <span class="nav-text">未完待续</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8Java%E4%B8%AD%E4%BD%BF%E7%94%A8Redis%E8%AF%A6%E8%A7%81-Jedis%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3"><span class="nav-number">7.0.1.</span> <span class="nav-text">在Java中使用Redis详见 Jedis使用文档</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-number">3.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E9%9B%86"><span class="nav-number">4.</span> <span class="nav-text">排序集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%EF%BC%88map%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">哈希（map）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E4%B9%85%E5%8C%96"><span class="nav-number">6.</span> <span class="nav-text">持久化</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
