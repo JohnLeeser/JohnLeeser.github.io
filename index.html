@@ -160,6 +160,72 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/01/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar1.gif">
+      <meta itemprop="name" content="loner John">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/01/hello-world/" class="post-title-link" itemprop="url">Hello Blog World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-01 08:48:47 / 修改时间：08:48:48" itemprop="dateCreated datePublished" datetime="2021-04-01T08:48:47+08:00">2021-04-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/01/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/Servlet_Response/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -183,9 +249,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-30 03:24:08 / 修改时间：03:27:32" itemprop="dateCreated datePublished" datetime="2021-03-30T03:24:08+08:00">2021-03-30</time>
+              <time title="创建时间：2021-03-30 03:24:08" itemprop="dateCreated datePublished" datetime="2021-03-30T03:24:08+08:00">2021-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-01 08:28:08" itemprop="dateModified" datetime="2021-04-01T08:28:08+08:00">2021-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Servlet/" itemprop="url" rel="index"><span itemprop="name">Servlet</span></a>
+                </span>
             </span>
 
           
@@ -199,26 +280,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Servlet-Response"><a href="#Servlet-Response" class="headerlink" title="Servlet-Response"></a>Servlet-Response</h1><h2 id="设置响应消息"><a href="#设置响应消息" class="headerlink" title="设置响应消息"></a>设置响应消息</h2><ol>
-<li><h3 id="设置响应行"><a href="#设置响应行" class="headerlink" title="设置响应行"></a>设置响应行</h3></li>
+          <h2 id="设置响应消息"><a href="#设置响应消息" class="headerlink" title="设置响应消息"></a>设置响应消息</h2><ol>
+<li>设置响应行</li>
 </ol>
 <ul>
 <li>格式</li>
-<li>设置状态码  <code>response.setStatus(302);</code></li>
-</ul>
-<ol start="2">
-<li><h3 id="设置响应头"><a href="#设置响应头" class="headerlink" title="设置响应头"></a>设置响应头</h3></li>
-</ol>
-<ul>
-<li><code>response.setHeader(&quot;location&quot;,&quot;/demo1&quot;); </code>  </li>
-</ul>
-<ol start="3">
-<li><h3 id="设置响应体"><a href="#设置响应体" class="headerlink" title="设置响应体"></a>设置响应体</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*输出字符流数据*&#x2F;</span><br><span class="line">PrintWriter writer &#x3D; response.getWriter();</span><br><span class="line">writer.write(&quot;hello response哈哈哈&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;*输出字节流数据*&#x2F;</span><br><span class="line">ServletOutputStream outputStream &#x3D; response.getOutputStream();</span><br><span class="line">outputStream.write(&quot;hello world 哈哈哈&quot;.getBytes(StandardCharsets.UTF_8));</span><br><span class="line"></span><br><span class="line">&#x2F;*输出字节流数据-图片*&#x2F;</span><br><span class="line">int height &#x3D; 200;</span><br><span class="line">int width &#x3D; 200;</span><br><span class="line">BufferedImage bufferedImage &#x3D; new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);</span><br><span class="line">ImageIO.write(bufferedImage,&quot;hello&quot;,response.getOutputStream());</span><br></pre></td></tr></table></figure>
-<h2 id="常用功能"><a href="#常用功能" class="headerlink" title="常用功能"></a>常用功能</h2></li>
-<li>重定向<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">response.setStatus(302);</span><br><span class="line">   response.setHeader(&quot;location&quot;,&quot;&#x2F;demo1&quot;);</span><br><span class="line">   &#x2F;*简化代码*&#x2F;</span><br><span class="line">   response.sendRedirect(&quot;&#x2F;demo1&quot;);</span><br><span class="line">&#x2F;*书写路径时要注意绝对路径和相对路径的区别，使用绝对路径时使用动态获取*&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li>编码设置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*设置输出流的编码*&#x2F;</span><br><span class="line">   response.setCharacterEncoding(&quot;GBK&quot;);</span><br><span class="line">&#x2F;*设置Content-Type 设置的编码对服务器和客户端双向影响*&#x2F;</span><br><span class="line">   response.setContentType(&quot;text&#x2F;html;charset&#x3D;utf-8&quot;);</span><br></pre></td></tr></table></figure></li>
-</ol>
-
+<li>设置状态码  <code>response.setStatus(302);</code>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/Servlet_Response/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -260,9 +335,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-30 03:23:50 / 修改时间：03:27:21" itemprop="dateCreated datePublished" datetime="2021-03-30T03:23:50+08:00">2021-03-30</time>
+              <time title="创建时间：2021-03-30 03:23:50" itemprop="dateCreated datePublished" datetime="2021-03-30T03:23:50+08:00">2021-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-01 08:27:54" itemprop="dateModified" datetime="2021-04-01T08:27:54+08:00">2021-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Servlet/" itemprop="url" rel="index"><span itemprop="name">Servlet</span></a>
+                </span>
             </span>
 
           
@@ -276,20 +366,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="ServletContext"><a href="#ServletContext" class="headerlink" title="ServletContext"></a>ServletContext</h1><h2 id="概念：由服务器创建的对象（每个工程创建一个）它是全局应用程序共享对象，每个工程的所有servlet共享这个对象。"><a href="#概念：由服务器创建的对象（每个工程创建一个）它是全局应用程序共享对象，每个工程的所有servlet共享这个对象。" class="headerlink" title="概念：由服务器创建的对象（每个工程创建一个）它是全局应用程序共享对象，每个工程的所有servlet共享这个对象。"></a>概念：由服务器创建的对象（每个工程创建一个）它是全局应用程序共享对象，每个工程的所有servlet共享这个对象。</h2><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><ul>
-<li><h3 id="是一个域对象。"><a href="#是一个域对象。" class="headerlink" title="是一个域对象。"></a>是一个域对象。</h3></li>
-<li><h3 id="可以读取全局配置参数"><a href="#可以读取全局配置参数" class="headerlink" title="可以读取全局配置参数"></a>可以读取全局配置参数</h3></li>
-<li><h3 id="可以搜索当前工程目录下面的资源文件"><a href="#可以搜索当前工程目录下面的资源文件" class="headerlink" title="可以搜索当前工程目录下面的资源文件"></a>可以搜索当前工程目录下面的资源文件</h3></li>
-<li><h3 id="可以获取当前工程名字"><a href="#可以获取当前工程名字" class="headerlink" title="可以获取当前工程名字"></a>可以获取当前工程名字</h3></li>
-</ul>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-获取该对象"><a href="#1-获取该对象" class="headerlink" title="1. 获取该对象"></a>1. 获取该对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*通过request对象获取*&#x2F;</span><br><span class="line">ServletContext servletContext &#x3D; request.getServletContext();</span><br><span class="line">&#x2F;*通过HttpServlet获取*&#x2F;</span><br><span class="line">ServletContext servletContext1 &#x3D; this.getServletContext();</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-操作"><a href="#2-操作" class="headerlink" title="2. 操作"></a>2. 操作</h3><ul>
-<li><h4 id="获取MIME类型：-String-mimeType-servletContext-getMimeType-quot-a-jpg-quot"><a href="#获取MIME类型：-String-mimeType-servletContext-getMimeType-quot-a-jpg-quot" class="headerlink" title="获取MIME类型： String mimeType = servletContext.getMimeType(&quot;a.jpg&quot;);"></a>获取MIME类型： <code>String mimeType = servletContext.getMimeType(&quot;a.jpg&quot;);</code></h4></li>
-<li><h4 id="域对象相关操作："><a href="#域对象相关操作：" class="headerlink" title="域对象相关操作："></a>域对象相关操作：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*设置*&#x2F;</span><br><span class="line">servletContext.setAttribute(&quot;code&quot;,&quot;123456&quot;);</span><br><span class="line">&#x2F;*获取*&#x2F;</span><br><span class="line">Object code &#x3D; servletContext.getAttribute(&quot;code&quot;);</span><br><span class="line">&#x2F;*移除*&#x2F;</span><br><span class="line">servletContext.removeAttribute(&quot;code&quot;);</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="获取资源文件的真实路径："><a href="#获取资源文件的真实路径：" class="headerlink" title="获取资源文件的真实路径："></a>获取资源文件的真实路径：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*web目录下资源访问*&#x2F;</span><br><span class="line">String b &#x3D; servletContext.getRealPath(&quot;&#x2F;b.txt&quot;);</span><br><span class="line">&#x2F;*WEB-INF目录下的资源访问*&#x2F;</span><br><span class="line">String c &#x3D; servletContext.getRealPath(&quot;&#x2F;WEB-INF&#x2F;c.txt&quot;);</span><br><span class="line">&#x2F;*src目录下的资源访问*&#x2F;</span><br><span class="line">String a &#x3D; servletContext.getRealPath(&quot;&#x2F;WEB-INF&#x2F;classes&#x2F;a.txt&quot;);</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+          <p>概念：由服务器创建的对象（每个工程创建一个）它是全局应用程序共享对象，每个工程的所有servlet共享这个对象。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><ul>
+<li>是一个域对象。</li>
+<li>可以读取全局配置参数
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/Servlet_Context/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -339,8 +427,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-31 19:16:27" itemprop="dateModified" datetime="2021-03-31T19:16:27+08:00">2021-03-31</time>
+                <time title="修改时间：2021-04-01 09:26:23" itemprop="dateModified" datetime="2021-04-01T09:26:23+08:00">2021-04-01</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-Redis/" itemprop="url" rel="index"><span itemprop="name">数据库-Redis</span></a>
+                </span>
+            </span>
 
           
 
@@ -354,22 +451,14 @@
 
       
           <h3 id="1-加载jar包（本文中使用mavem）在pom-xml文件中加入"><a href="#1-加载jar包（本文中使用mavem）在pom-xml文件中加入" class="headerlink" title="1. 加载jar包（本文中使用mavem）在pom.xml文件中加入"></a>1. 加载jar包（本文中使用mavem）在pom.xml文件中加入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;redis.clients&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jedis&lt;&#x2F;artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.3.0&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.commons&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-lang3&lt;&#x2F;artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.11&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2-使用案例"><a href="#2-使用案例" class="headerlink" title="2. 使用案例"></a>2. 使用案例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;获取连接（空参则使用默认）</span><br><span class="line">Jedis jedis &#x3D; new Jedis(&quot;localhost&quot;,6379);</span><br><span class="line">&#x2F;&#x2F;操作</span><br><span class="line">jedis.set(&quot;username&quot;,&quot;111&quot;);</span><br><span class="line">&#x2F;&#x2F;关闭连接</span><br><span class="line">jedis.close();</span><br></pre></td></tr></table></figure>
-<p>其他使用方法和操作Redis一样，详见 <a target="_blank" rel="noopener" href="https://johnleeser.github.io/2021/03/30/Redis/">Redis使用文档</a></p>
-<h3 id="3-Jedis连接池"><a href="#3-Jedis连接池" class="headerlink" title="3. Jedis连接池"></a>3. Jedis连接池</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   &#x2F;&#x2F;创建一个配置对象</span><br><span class="line">   JedisPoolConfig jedisPoolConfig &#x3D; new JedisPoolConfig();</span><br><span class="line">   jedisPoolConfig.setMaxTotal(100);</span><br><span class="line">   jedisPoolConfig.setMaxIdle(10);</span><br><span class="line">   </span><br><span class="line">   &#x2F;&#x2F;创建连接池对象（空参则使用默认）</span><br><span class="line">   JedisPool jedisPool &#x3D; new JedisPool(jedisPoolConfig,&quot;localhost&quot;,6379);</span><br><span class="line">   &#x2F;&#x2F;获取连接</span><br><span class="line">   Jedis jedis &#x3D; jedisPool.getResource();</span><br><span class="line">   &#x2F;&#x2F;使用</span><br><span class="line">   jedis.set(&quot;username&quot;, &quot;111&quot;);</span><br><span class="line">&#x2F;&#x2F;归还连接对象</span><br><span class="line">   jedis.close();</span><br></pre></td></tr></table></figure>
-<h3 id="4-Jedis工具类"><a href="#4-Jedis工具类" class="headerlink" title="4. Jedis工具类"></a>4. Jedis工具类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class JedisPollUtil &#123;</span><br><span class="line"></span><br><span class="line">    private static JedisPool jedisPool;</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        &#x2F;&#x2F;读取配置文件</span><br><span class="line">        InputStream inputStream &#x3D; JedisPollUtil.class.getResourceAsStream(&quot;jedis.properties&quot;);</span><br><span class="line">        &#x2F;&#x2F;创建Properties对象</span><br><span class="line">        Properties properties &#x3D; new Properties();</span><br><span class="line">        &#x2F;&#x2F;关联文件</span><br><span class="line">        try &#123;</span><br><span class="line">            properties.load(inputStream);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;获取数据，设置 JedisPoolConfig</span><br><span class="line">        JedisPoolConfig jedisPoolConfig &#x3D; new JedisPoolConfig();</span><br><span class="line">        jedisPoolConfig.setMaxIdle(Integer.parseInt(properties.getProperty(&quot;maxTotal&quot;)));</span><br><span class="line">        jedisPoolConfig.setMaxIdle(Integer.parseInt(properties.getProperty(&quot;maxIdle&quot;)));</span><br><span class="line">        &#x2F;*初始化JedisPool*&#x2F;</span><br><span class="line">        jedisPool &#x3D; new JedisPool(jedisPoolConfig,properties.getProperty(&quot;host&quot;),Integer.parseInt(properties.getProperty(&quot;port&quot;)));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*获取连接方法*&#x2F;</span><br><span class="line">    public static Jedis getJedis()&#123;</span><br><span class="line">        return jedisPool.getResource();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="Jedis连接池配置信息"><a href="#Jedis连接池配置信息" class="headerlink" title="Jedis连接池配置信息"></a>Jedis连接池配置信息</h2><h4 id="详见Redis参数优化"><a href="#详见Redis参数优化" class="headerlink" title="详见Redis参数优化"></a><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/98726.html#section-m2c-5kr-zfb">详见Redis参数优化</a></h4><h3 id="1-连接池相关参数"><a href="#1-连接池相关参数" class="headerlink" title="1.连接池相关参数"></a>1.连接池相关参数</h3><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">maxTotal	资源池中的最大连接数	参见关键参数设置建议。</span><br><span class="line">maxIdle	资源池允许的最大空闲连接数	参见关键参数设置建议。</span><br><span class="line">minIdle	资源池确保的最少空闲连接数  	参见关键参数设置建议。</span><br><span class="line">blockWhenExhausted	当资源池用尽后，调用者是否要等待。只有当值为true时，下面的maxWaitMillis才会生效。	true	建议使用默认值。</span><br><span class="line">maxWaitMillis	当资源池连接用尽后，调用者的最大等待时间（单位为毫秒）。	-1（表示永不超时）	不建议使用默认值。</span><br><span class="line">testOnBorrow	向资源池借用连接时是否做连接有效性检测（ping）。检测到的无效连接将会被移除。	false	业务量很大时候建议设置为false，减少一次ping的开销。</span><br><span class="line">testOnReturn	向资源池归还连接时是否做连接有效性检测（ping）。检测到无效连接将会被移除。	false	业务量很大时候建议设置为false，减少一次ping的开销。</span><br><span class="line">jmxEnabled	是否开启JMX监控	true	建议开启，请注意应用本身也需要开启。</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="2-空闲资源检测相关参数"><a href="#2-空闲资源检测相关参数" class="headerlink" title="2.空闲资源检测相关参数"></a>2.空闲资源检测相关参数</h3><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">testWhileIdle	是否开启空闲资源检测。	false	true</span><br><span class="line">timeBetweenEvictionRunsMillis	空闲资源的检测周期（单位为毫秒）	-1（不检测）</span><br><span class="line">建议设置，周期自行选择，也可以默认也可以使用下方JedisPoolConfig 中的配置。</span><br><span class="line">minEvictableIdleTimeMillis	资源池中资源的最小空闲时间（单位为毫秒），达到此值后空闲资源将被移除。	180000（即30分钟）</span><br><span class="line">可根据自身业务决定，一般默认值即可，也可以考虑使用下方JeidsPoolConfig中的配置。</span><br><span class="line">numTestsPerEvictionRun	做空闲资源检测时，每次检测资源的个数。	3</span><br><span class="line">可根据自身应用连接数进行微调，如果设置为 -1，就是对所有连接做空闲监测。</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="3-关键参数设置建议"><a href="#3-关键参数设置建议" class="headerlink" title="3. 关键参数设置建议"></a>3. 关键参数设置建议</h3><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">maxTotal（最大连接数）</span><br><span class="line"></span><br><span class="line">想合理设置maxTotal（最大连接数）需要考虑的因素较多，如：</span><br><span class="line"></span><br><span class="line">业务希望的Redis并发量；</span><br><span class="line">客户端执行命令时间；</span><br><span class="line">Redis资源，例如nodes （如应用ECS个数等） * maxTotal不能超过Redis的最大连接数（可在实例详情页面查看）；</span><br><span class="line">资源开销，例如虽然希望控制空闲连接，但又不希望因为连接池中频繁地释放和创建连接造成不必要的开销。</span><br><span class="line">假设一次命令时间，即borrow|return resource加上Jedis执行命令 （ 含网络耗时）的平均耗时约为1ms，一个连接的QPS大约是1s&#x2F;1ms &#x3D; 1000，而业务期望的单个Redis的QPS是50000（业务总的QPS&#x2F;Redis分片个数），那么理论上需要的资源池大小（即MaxTotal）是50000 &#x2F; 1000 &#x3D; 50。</span><br><span class="line"></span><br><span class="line">但事实上这只是个理论值，除此之外还要预留一些资源，所以maxTotal可以比理论值大一些。这个值不是越大越好，一方面连接太多会占用客户端和服务端资源，另一方面对于Redis这种高QPS的服务器，如果出现大命令的阻塞，即使设置再大的资源池也无济于事。</span><br><span class="line"></span><br><span class="line">maxIdle与minIdle</span><br><span class="line"></span><br><span class="line">maxIdle实际上才是业务需要的最大连接数，maxTotal 是为了给出余量，所以 maxIdle 不要设置得过小，否则会有new Jedis（新连接）开销，而minIdle是为了控制空闲资源检测。</span><br><span class="line"></span><br><span class="line">连接池的最佳性能是maxTotal&#x3D;maxIdle，这样就避免了连接池伸缩带来的性能干扰。如果您的业务存在突峰访问，建议设置这两个参数的值相等；如果并发量不大或者maxIdle设置过高，则会导致不必要的连接资源浪费。</span><br><span class="line"></span><br><span class="line">您可以根据实际总QPS和调用Redis的客户端规模整体评估每个节点所使用的连接池大小。</span><br><span class="line"></span><br><span class="line">使用监控获取合理值</span><br><span class="line"></span><br><span class="line">在实际环境中，比较可靠的方法是通过监控来尝试获取参数的最佳值。可以考虑通过JMX等方式实现监控，从而找到合理值。</span><br></pre></td></tr></table></figure>
-</blockquote>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/Jedis/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -411,9 +500,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-30 03:22:32 / 修改时间：03:26:44" itemprop="dateCreated datePublished" datetime="2021-03-30T03:22:32+08:00">2021-03-30</time>
+              <time title="创建时间：2021-03-30 03:22:32" itemprop="dateCreated datePublished" datetime="2021-03-30T03:22:32+08:00">2021-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-01 09:23:15" itemprop="dateModified" datetime="2021-04-01T09:23:15+08:00">2021-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-MySQL/" itemprop="url" rel="index"><span itemprop="name">数据库-MySQL</span></a>
+                </span>
             </span>
 
           
@@ -427,17 +531,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Spring-JDBC-Template"><a href="#Spring-JDBC-Template" class="headerlink" title="Spring JDBC Template"></a>Spring JDBC Template</h1><h2 id="1-主要方法："><a href="#1-主要方法：" class="headerlink" title="1.  主要方法："></a>1.  主要方法：</h2><ul>
+          <h3 id="1-主要方法："><a href="#1-主要方法：" class="headerlink" title="1.  主要方法："></a>1.  主要方法：</h3><ul>
 <li>update()：执行DML语句</li>
 <li>queryForMap()：只能返回长度为1的map</li>
-<li>queryForList()：返回多条结果用这个</li>
-<li>query()：查询结果并将结果封装为JavaBean对象。（别问，问就是前面的不好用，用这个）</li>
-<li>queryForObject()：<h2 id="2-使用："><a href="#2-使用：" class="headerlink" title="2. 使用："></a>2. 使用：</h2><h3 id="1-加载jar包（本文中使用mavem）在pom-xml文件中加入"><a href="#1-加载jar包（本文中使用mavem）在pom-xml文件中加入" class="headerlink" title="1. 加载jar包（本文中使用mavem）在pom.xml文件中加入"></a>1. 加载jar包（本文中使用mavem）在pom.xml文件中加入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">       &lt;groupId&gt;org.springframework&lt;&#x2F;groupId&gt;</span><br><span class="line">       &lt;artifactId&gt;spring-jdbc&lt;&#x2F;artifactId&gt;</span><br><span class="line">       &lt;version&gt;4.2.5.RELEASE&lt;&#x2F;version&gt;</span><br><span class="line">       &lt;scope&gt;compile&lt;&#x2F;scope&gt;</span><br><span class="line">   &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2-创建对象"><a href="#2-创建对象" class="headerlink" title="2. 创建对象"></a>2. 创建对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JdbcTemplate jdbcTemplate &#x3D; new JdbcTemplate(JDBCUtils.getDateSource());</span><br></pre></td></tr></table></figure>
-<h3 id="3-调用方法："><a href="#3-调用方法：" class="headerlink" title="3. 调用方法："></a>3. 调用方法：</h3></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*编写sql语句*&#x2F;</span><br><span class="line">String sql &#x3D; &quot;update user set password &#x3D; 123456 where id &#x3D; ? &quot;;</span><br><span class="line">&#x2F;*执行*&#x2F;</span><br><span class="line">&#x2F;*queryForMap()*&#x2F;</span><br><span class="line">   Map&lt;String, Object&gt; stringObjectMap &#x3D; jdbcTemplate.queryForMap(sql,&quot;?的值&quot;);</span><br><span class="line">   </span><br><span class="line">   &#x2F;*queryForList()*&#x2F;</span><br><span class="line">   List&lt;Map&lt;String, Object&gt;&gt; maps &#x3D; jdbcTemplate.queryForList(sql, &quot;?的值&quot;);</span><br><span class="line">   </span><br><span class="line">   &#x2F;*queryForObject()*&#x2F;</span><br><span class="line">   &#x2F;*自定义返回值*&#x2F;</span><br><span class="line">   jdbcTemplate.queryForObject(sql,long.class);</span><br><span class="line">   </span><br><span class="line">   &#x2F;*query()*&#x2F;</span><br><span class="line">   &#x2F;*直接赋值，要注意数据库查询的列名与实体类的属性名一致.</span><br><span class="line">   Java属性的命名应遵循camelCase风格，如：myPassword</span><br><span class="line">   * 对应的数据库命名可以为 my_password 或 mypassword*&#x2F;</span><br><span class="line">   List&lt;User&gt; userList &#x3D; jdbcTemplate.query(sql, new BeanPropertyRowMapper&lt;User&gt;(User.class));</span><br><span class="line"></span><br><span class="line">   &#x2F;*如果名字不一致，定义一个新的类来重写自己的规则*&#x2F;</span><br><span class="line">   List&lt;User&gt; userList1 &#x3D; jdbcTemplate.query(sql, new RowMapper&lt;User&gt;() &#123;</span><br><span class="line">       @Override</span><br><span class="line">       public User mapRow(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">           User user &#x3D; new User();</span><br><span class="line">           user.setId(resultSet.getInt(&quot;id&quot;));</span><br><span class="line">           user.setUsername(resultSet.getString(&quot;username&quot;));</span><br><span class="line">           user.setPassword(resultSet.getString(&quot;password&quot;));</span><br><span class="line">           return user;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<li>queryForList()：返回多条结果用这个
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/JDBC_Template/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -479,9 +584,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-30 03:21:58 / 修改时间：03:26:32" itemprop="dateCreated datePublished" datetime="2021-03-30T03:21:58+08:00">2021-03-30</time>
+              <time title="创建时间：2021-03-30 03:21:58" itemprop="dateCreated datePublished" datetime="2021-03-30T03:21:58+08:00">2021-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-01 09:17:47" itemprop="dateModified" datetime="2021-04-01T09:17:47+08:00">2021-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mail/" itemprop="url" rel="index"><span itemprop="name">Mail</span></a>
+                </span>
             </span>
 
           
@@ -495,22 +615,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Javamail简单使用"><a href="#Javamail简单使用" class="headerlink" title="Javamail简单使用"></a>Javamail简单使用</h1><h3 id="1-加载jar包"><a href="#1-加载jar包" class="headerlink" title="1.加载jar包"></a>1.加载jar包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">           &lt;groupId&gt;com.sun.mail&lt;&#x2F;groupId&gt;</span><br><span class="line">           &lt;artifactId&gt;javax.mail&lt;&#x2F;artifactId&gt;</span><br><span class="line">           &lt;version&gt;1.6.2&lt;&#x2F;version&gt;</span><br><span class="line">   &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="JavaMail-jar包下载地址"><a href="#JavaMail-jar包下载地址" class="headerlink" title="JavaMail jar包下载地址"></a><a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar">JavaMail jar包下载地址</a></h4><h4 id="maven仓库地址"><a href="#maven仓库地址" class="headerlink" title="maven仓库地址"></a><a target="_blank" rel="noopener" href="https://mvnrepository.com/artifact/com.sun.mail/javax.mail/1.6.2">maven仓库地址</a></h4><h3 id="2-使用的主要类"><a href="#2-使用的主要类" class="headerlink" title="2.使用的主要类"></a>2.使用的主要类</h3><ul>
-<li><h4 id="Session-类"><a href="#Session-类" class="headerlink" title="Session 类"></a>Session 类</h4></li>
-<li><h4 id="Message-类"><a href="#Message-类" class="headerlink" title="Message 类"></a>Message 类</h4></li>
-<li><h4 id="Transport-类"><a href="#Transport-类" class="headerlink" title="Transport 类"></a>Transport 类</h4><h3 id="3-发送一封邮件"><a href="#3-发送一封邮件" class="headerlink" title="3.发送一封邮件"></a>3.发送一封邮件</h3></li>
-</ul>
-<ol>
-<li><h4 id="设置session类"><a href="#设置session类" class="headerlink" title="设置session类"></a>设置session类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;加载props</span><br><span class="line">Properties prop &#x3D; new Properties();</span><br><span class="line">&#x2F;&#x2F;从文件中读取</span><br><span class="line">InputStreamReader inputStreamReader &#x3D; new InputStreamReader(UtilMail.class.getClassLoader().getResourceAsStream(&quot;mail.properties&quot;),&quot;GBK&quot;);</span><br><span class="line">&#x2F;&#x2F;或者在代码中设置</span><br><span class="line">props.setProperty(&quot;mail.smtp.host&quot;,&quot;smtp.163.com&quot;)；&#x2F;&#x2F;这里用163邮箱举例，不同的邮箱smtp服务器地址不同。</span><br><span class="line">props.setProperty(&quot;mail.smtp.auth&quot;,&quot;true&quot;)；</span><br><span class="line">props.setProperty(&quot;mail.transport.protocol&quot;,&quot;smtp&quot;)；</span><br><span class="line">Session session &#x3D; Session.getInstance(prop);</span><br><span class="line">&#x2F;&#x2F;mail.smtp.host是必须设置的。</span><br></pre></td></tr></table></figure>
-<h4 id="其他参数设置详见-javaMail官方文档"><a href="#其他参数设置详见-javaMail官方文档" class="headerlink" title="其他参数设置详见 javaMail官方文档"></a>其他参数设置详见 <a target="_blank" rel="noopener" href="https://github.com/javaee/javamail">javaMail官方文档</a></h4></li>
-<li><h4 id="设置Message类"><a href="#设置Message类" class="headerlink" title="设置Message类"></a>设置Message类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Message mimeMessage &#x3D; new MimeMessage(session);</span><br><span class="line">&#x2F;&#x2F;设置发送人的信息</span><br><span class="line">   mimeMessage.setFrom(new InternetAddress(xxx@xxx.com,&quot;xxx&quot;,&quot;UTF-8&quot;));</span><br><span class="line">&#x2F;&#x2F;设置发送的邮件正文</span><br><span class="line">   mimeMessage.setContent(&quot;正文&quot;,&quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);</span><br><span class="line">&#x2F;&#x2F;设置发送的邮件主题</span><br><span class="line">   mimeMessage.setSubject(&quot;主题&quot;,&quot;UTF-8&quot;);</span><br><span class="line">&#x2F;&#x2F;设置接受人邮件地址</span><br><span class="line">   mimeMessage.setRecipients(MimeMessage.RecipientType.TO,xxx@xxx.com);  </span><br><span class="line">&#x2F;&#x2F;设置发送时间</span><br><span class="line">mimeMessage.setSentDate(new Date());</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="设置Transport类"><a href="#设置Transport类" class="headerlink" title="设置Transport类"></a>设置Transport类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Transport.send(mimeMessage,&quot;xxx@xxx.com&quot;,&quot;这写发送邮箱的授权码&quot;);&#x2F;&#x2F;此为懒人写法,好用就行</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="4-代码示例"><a href="#4-代码示例" class="headerlink" title="4.代码示例"></a>4.代码示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">package util.utilmail;</span><br><span class="line"></span><br><span class="line">import javax.mail.MessagingException;</span><br><span class="line">import javax.mail.Session;</span><br><span class="line">import javax.mail.Transport;</span><br><span class="line">import javax.mail.internet.InternetAddress;</span><br><span class="line">import javax.mail.internet.MimeMessage;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.io.UnsupportedEncodingException;</span><br><span class="line">import java.util.Date;</span><br><span class="line">import java.util.Properties;</span><br><span class="line"></span><br><span class="line">public class UtilMail &#123;</span><br><span class="line">    private static Properties prop &#x3D; null;</span><br><span class="line">    private static Session session &#x3D;null;</span><br><span class="line">    private static MimeMessage mimeMessage &#x3D;null;</span><br><span class="line"></span><br><span class="line">    private static String sendAddress &#x3D; null;</span><br><span class="line">    private static String receiveAddress &#x3D; null;</span><br><span class="line">    private static String sendAddressPassword &#x3D; null;</span><br><span class="line">    private static String contentType &#x3D; null;</span><br><span class="line">    private static String subjectType &#x3D; null;</span><br><span class="line">    private static String sendNicknameType &#x3D; null;</span><br><span class="line">    private static String sendNickname &#x3D; null;</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        Properties properties &#x3D; new Properties();</span><br><span class="line">        prop &#x3D; new Properties();</span><br><span class="line">        try &#123;</span><br><span class="line">            InputStreamReader inputStreamReader &#x3D; new InputStreamReader(UtilMail.class.getClassLoader().getResourceAsStream(&quot;mail_user.properties&quot;),&quot;GBK&quot;);</span><br><span class="line">            InputStreamReader inputStreamReader1 &#x3D; new InputStreamReader(UtilMail.class.getClassLoader().getResourceAsStream(&quot;mail_connection.properties&quot;),&quot;GBK&quot;);</span><br><span class="line">            prop.load(inputStreamReader1);</span><br><span class="line">            properties.load(inputStreamReader);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        sendAddress &#x3D; properties.getProperty(&quot;sendAddress&quot;);</span><br><span class="line">        receiveAddress &#x3D; properties.getProperty(&quot;receiveAddress&quot;);</span><br><span class="line">        sendAddressPassword &#x3D; properties.getProperty(&quot;sendAddressPassword&quot;);</span><br><span class="line">        contentType &#x3D; properties.getProperty(&quot;contentType&quot;);</span><br><span class="line">        subjectType &#x3D; properties.getProperty(&quot;subjectType&quot;);</span><br><span class="line">        sendNicknameType &#x3D; properties.getProperty(&quot;sendNicknameType&quot;);</span><br><span class="line">        sendNickname &#x3D; properties.getProperty(&quot;sendNickname&quot;);</span><br><span class="line">        session &#x3D; Session.getInstance(prop);</span><br><span class="line">        mimeMessage &#x3D; new MimeMessage(session);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void sendMessage(String nickname,String subject,String content,String receiver) throws MessagingException, UnsupportedEncodingException &#123;</span><br><span class="line">        mimeMessage.setFrom(new InternetAddress(sendAddress,nickname,sendNicknameType));</span><br><span class="line">        mimeMessage.setContent(content,contentType);</span><br><span class="line">        mimeMessage.setSubject(subject,subjectType);</span><br><span class="line">        mimeMessage.setRecipients(MimeMessage.RecipientType.TO,receiver);</span><br><span class="line">        mimeMessage.setSentDate(new Date());</span><br><span class="line">        Transport.send(mimeMessage,sendAddress,sendAddressPassword);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void sendMessage(String subject,String content) throws MessagingException, UnsupportedEncodingException &#123;</span><br><span class="line">        mimeMessage.setFrom(new InternetAddress(sendAddress,sendNickname,sendNicknameType));</span><br><span class="line">        mimeMessage.setContent(content,contentType);</span><br><span class="line">        mimeMessage.setSubject(subject,subjectType);</span><br><span class="line">        mimeMessage.setRecipients(MimeMessage.RecipientType.TO,receiveAddress);</span><br><span class="line">        mimeMessage.setSentDate(new Date());</span><br><span class="line">        Transport.send(mimeMessage,sendAddress,sendAddressPassword);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>end</p>
-
+          <h3 id="1-加载jar包"><a href="#1-加载jar包" class="headerlink" title="1.加载jar包"></a>1.加载jar包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">           &lt;groupId&gt;com.sun.mail&lt;&#x2F;groupId&gt;</span><br><span class="line">           &lt;artifactId&gt;javax.mail&lt;&#x2F;artifactId&gt;</span><br><span class="line">           &lt;version&gt;1.6.2&lt;&#x2F;version&gt;</span><br><span class="line">   &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/JavaMail/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -552,9 +665,28 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-30 03:21:43 / 修改时间：03:26:12" itemprop="dateCreated datePublished" datetime="2021-03-30T03:21:43+08:00">2021-03-30</time>
+              <time title="创建时间：2021-03-30 03:21:43" itemprop="dateCreated datePublished" datetime="2021-03-30T03:21:43+08:00">2021-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-01 09:16:49" itemprop="dateModified" datetime="2021-04-01T09:16:49+08:00">2021-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Servlet/" itemprop="url" rel="index"><span itemprop="name">Servlet</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Servlet/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+                </span>
             </span>
 
           
@@ -568,24 +700,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="HTTP响应状态码："><a href="#HTTP响应状态码：" class="headerlink" title="HTTP响应状态码："></a>HTTP响应状态码：</h2><ul>
-<li><h3 id="1xx-信息，服务器收到请求，需要请求者继续执行操作"><a href="#1xx-信息，服务器收到请求，需要请求者继续执行操作" class="headerlink" title="1xx 信息，服务器收到请求，需要请求者继续执行操作"></a>1xx 信息，服务器收到请求，需要请求者继续执行操作</h3></li>
-<li><h3 id="2xx-响应成功"><a href="#2xx-响应成功" class="headerlink" title="2xx 响应成功"></a>2xx 响应成功</h3></li>
-<li><h3 id="3xx-重定向，需要进一步的操作以完成请求"><a href="#3xx-重定向，需要进一步的操作以完成请求" class="headerlink" title="3xx 重定向，需要进一步的操作以完成请求"></a>3xx 重定向，需要进一步的操作以完成请求</h3></li>
-<li><h3 id="4xx-客户端错误"><a href="#4xx-客户端错误" class="headerlink" title="4xx 客户端错误"></a>4xx 客户端错误</h3></li>
-<li><h3 id="5xx-服务端错误"><a href="#5xx-服务端错误" class="headerlink" title="5xx 服务端错误"></a>5xx 服务端错误</h3></li>
-</ul>
-<h2 id="1-HTTP-响应头（格式：头名称：值）"><a href="#1-HTTP-响应头（格式：头名称：值）" class="headerlink" title="1. HTTP 响应头（格式：头名称：值）"></a>1. HTTP 响应头（格式：头名称：值）</h2><ul>
-<li><h3 id="Content-Type-服务器告诉客户端本次响应体数据格式以及编码格式。"><a href="#Content-Type-服务器告诉客户端本次响应体数据格式以及编码格式。" class="headerlink" title="Content-Type 服务器告诉客户端本次响应体数据格式以及编码格式。"></a>Content-Type 服务器告诉客户端本次响应体数据格式以及编码格式。</h3></li>
-<li><h3 id="Content-Length-返回的内容长度"><a href="#Content-Length-返回的内容长度" class="headerlink" title="Content-Length 返回的内容长度"></a>Content-Length 返回的内容长度</h3></li>
-<li><h3 id="Content-dispostion-服务器告诉客户端以什么格式打开响应体数据"><a href="#Content-dispostion-服务器告诉客户端以什么格式打开响应体数据" class="headerlink" title="Content-dispostion 服务器告诉客户端以什么格式打开响应体数据"></a>Content-dispostion 服务器告诉客户端以什么格式打开响应体数据</h3><ul>
-<li><h4 id="in-line-默认值"><a href="#in-line-默认值" class="headerlink" title="in-line :默认值"></a>in-line :默认值</h4></li>
-<li><h4 id="attachment-以附件形式打开响应体"><a href="#attachment-以附件形式打开响应体" class="headerlink" title="attachment :以附件形式打开响应体"></a>attachment :以附件形式打开响应体</h4></li>
-</ul>
-</li>
-<li><h3 id=""><a href="#" class="headerlink" title=""></a></h3></li>
-</ul>
-<h2 id="2-响应空行"><a href="#2-响应空行" class="headerlink" title="2. 响应空行"></a>2. 响应空行</h2><h2 id="3-响应体"><a href="#3-响应体" class="headerlink" title="3. 响应体"></a>3. 响应体</h2>
+          <h3 id="HTTP响应状态码："><a href="#HTTP响应状态码：" class="headerlink" title="HTTP响应状态码："></a>HTTP响应状态码：</h3><ul>
+<li>1xx 信息，服务器收到请求，需要请求者继续执行操作</li>
+<li>2xx 响应成功
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/HTTP_response/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -627,9 +752,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-30 03:21:06 / 修改时间：03:25:30" itemprop="dateCreated datePublished" datetime="2021-03-30T03:21:06+08:00">2021-03-30</time>
+              <time title="创建时间：2021-03-30 03:21:06" itemprop="dateCreated datePublished" datetime="2021-03-30T03:21:06+08:00">2021-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-01 09:16:34" itemprop="dateModified" datetime="2021-04-01T09:16:34+08:00">2021-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaBean/" itemprop="url" rel="index"><span itemprop="name">JavaBean</span></a>
+                </span>
             </span>
 
           
@@ -643,15 +783,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="BeanUtil工具类"><a href="#BeanUtil工具类" class="headerlink" title="BeanUtil工具类"></a>BeanUtil工具类</h1><h2 id="1-概述：一个可以简化封装数据时繁琐操作的工具类"><a href="#1-概述：一个可以简化封装数据时繁琐操作的工具类" class="headerlink" title="1. 概述：一个可以简化封装数据时繁琐操作的工具类"></a>1. 概述：一个可以简化封装数据时繁琐操作的工具类</h2><h2 id="2-使用："><a href="#2-使用：" class="headerlink" title="2. 使用："></a>2. 使用：</h2><h3 id="1-加载jar包（本文使用maven）在pom文件中加入"><a href="#1-加载jar包（本文使用maven）在pom文件中加入" class="headerlink" title="1.  加载jar包（本文使用maven）在pom文件中加入"></a>1.  加载jar包（本文使用maven）在pom文件中加入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-beanutils&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-beanutils&lt;&#x2F;artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.9.3&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2-定义一个标准类（这里使用了Lombok）"><a href="#2-定义一个标准类（这里使用了Lombok）" class="headerlink" title="2.  定义一个标准类（这里使用了Lombok）"></a>2.  定义一个标准类（这里使用了Lombok）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import lombok.Getter;</span><br><span class="line">import lombok.Setter;</span><br><span class="line">import lombok.ToString;</span><br><span class="line"></span><br><span class="line">@ToString</span><br><span class="line">public class User &#123;</span><br><span class="line">    @Getter@Setter</span><br><span class="line">    private int id;</span><br><span class="line">    @Getter@Setter</span><br><span class="line">    private String username;</span><br><span class="line">    @Getter@Setter</span><br><span class="line">    private String password;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-用法"><a href="#3-用法" class="headerlink" title="3.用法"></a>3.用法</h3><h4 id="1-使用populate将map中数据封装到JavaBean中"><a href="#1-使用populate将map中数据封装到JavaBean中" class="headerlink" title="1. 使用populate将map中数据封装到JavaBean中"></a>1. 使用populate将map中数据封装到JavaBean中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public void function() throws ClassNotFoundException, InvocationTargetException, IllegalAccessException &#123;</span><br><span class="line">    User user &#x3D; new User();</span><br><span class="line">    Map&lt;String,String&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">    BeanUtils.populate(user,map);</span><br><span class="line">&#125;&#x2F;*注意key的值要一致*&#x2F;</span><br></pre></td></tr></table></figure>
-<h4 id="2-使用setproperty为JavaBean对象赋值"><a href="#2-使用setproperty为JavaBean对象赋值" class="headerlink" title="2. 使用setproperty为JavaBean对象赋值"></a>2. 使用setproperty为JavaBean对象赋值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public void function() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException &#123;</span><br><span class="line">    Object bean &#x3D; Class.forName(&quot;itcast.domain.User&quot;).getDeclaredConstructor().newInstance();</span><br><span class="line">    BeanUtils.setProperty(bean,&quot;username&quot;,&quot;张三&quot;);</span><br><span class="line">    BeanUtils.setProperty(bean,&quot;password&quot;,&quot;123456&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-使用getproperty来获取JavaBean对象的键值"><a href="#3-使用getproperty来获取JavaBean对象的键值" class="headerlink" title="3. 使用getproperty来获取JavaBean对象的键值"></a>3. 使用getproperty来获取JavaBean对象的键值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public void function() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException &#123;</span><br><span class="line">    Object bean &#x3D; Class.forName(&quot;itcast.domain.User&quot;).getDeclaredConstructor().newInstance();</span><br><span class="line">    String username &#x3D; BeanUtils.getProperty(bean, &quot;username&quot;);</span><br><span class="line">    String password &#x3D; BeanUtils.getProperty(bean, &quot;password&quot;);</span><br><span class="line">    BeanUtils.setProperty(bean,&quot;username&quot;,&quot;张三&quot;);</span><br><span class="line">    BeanUtils.setProperty(bean,&quot;password&quot;,&quot;123456&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="4-将bean中的值放入Map中"><a href="#4-将bean中的值放入Map中" class="headerlink" title="4.  将bean中的值放入Map中"></a>4.  将bean中的值放入Map中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public void function()throws Exception&#123;</span><br><span class="line">    Object bean &#x3D; Class.forName(&quot;itcast.domain.User&quot;).getDeclaredConstructor().newInstance();</span><br><span class="line">    Map&lt;String, String&gt; map &#x3D; BeanUtils.describe(bean);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="5-两个JavaBean对象之间的赋值"><a href="#5-两个JavaBean对象之间的赋值" class="headerlink" title="5. 两个JavaBean对象之间的赋值"></a>5. 两个JavaBean对象之间的赋值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public void function()throws Exception&#123;</span><br><span class="line">    User user1 &#x3D; new User();</span><br><span class="line">    user1.setPassword(&quot;123456&quot;);</span><br><span class="line">    user1.setUsername(&quot;张三&quot;);</span><br><span class="line">    User user2 &#x3D; new User();</span><br><span class="line">    BeanUtils.copyProperties(user2,user1);</span><br><span class="line">    System.out.println(user2.toString());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>本文只列举了常用的几种用法，其他内容详见<a target="_blank" rel="noopener" href="http://commons.apache.org/proper/commons-beanutils/javadocs/v1.9.4/apidocs/index.html">官方API文档</a></p>
-
+          <p> 概述：一个可以简化封装数据时繁琐操作的工具类</p>
+<h3 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h3><ol>
+<li> 加载jar包（本文使用maven）在pom文件中加入
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/BeanUtils/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -701,7 +843,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-01 01:20:51" itemprop="dateModified" datetime="2021-04-01T01:20:51+08:00">2021-04-01</time>
+                <time title="修改时间：2021-04-01 09:10:34" itemprop="dateModified" datetime="2021-04-01T09:10:34+08:00">2021-04-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -709,7 +851,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-Redis/" itemprop="url" rel="index"><span itemprop="name">数据库 - Redis</span></a>
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-Redis/" itemprop="url" rel="index"><span itemprop="name">数据库-Redis</span></a>
                 </span>
             </span>
 
@@ -736,76 +878,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/26/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar1.gif">
-      <meta itemprop="name" content="loner John">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/26/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-26 12:59:21" itemprop="dateCreated datePublished" datetime="2021-03-26T12:59:21+08:00">2021-03-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
       
     </div>
 
@@ -895,13 +967,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

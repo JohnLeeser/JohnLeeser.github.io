@@ -20,16 +20,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Spring JDBC Template1.  主要方法： update()：执行DML语句 queryForMap()：只能返回长度为1的map queryForList()：返回多条结果用这个 query()：查询结果并将结果封装为JavaBean对象。（别问，问就是前面的不好用，用这个） queryForObject()：2. 使用：1. 加载jar包（本文中使用mavem）在pom.xml">
+  <meta name="description" content="1.  主要方法： update()：执行DML语句 queryForMap()：只能返回长度为1的map queryForList()：返回多条结果用这个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDBC_Template">
 <meta property="og:url" content="http://example.com/2021/03/30/JDBC_Template/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Spring JDBC Template1.  主要方法： update()：执行DML语句 queryForMap()：只能返回长度为1的map queryForList()：返回多条结果用这个 query()：查询结果并将结果封装为JavaBean对象。（别问，问就是前面的不好用，用这个） queryForObject()：2. 使用：1. 加载jar包（本文中使用mavem）在pom.xml">
+<meta property="og:description" content="1.  主要方法： update()：执行DML语句 queryForMap()：只能返回长度为1的map queryForList()：返回多条结果用这个">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-29T19:22:32.000Z">
-<meta property="article:modified_time" content="2021-03-29T19:26:44.000Z">
+<meta property="article:modified_time" content="2021-04-01T01:23:15.000Z">
 <meta property="article:author" content="loner John">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="JDBC">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2021/03/30/JDBC_Template/">
@@ -187,9 +189,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-30 03:22:32 / 修改时间：03:26:44" itemprop="dateCreated datePublished" datetime="2021-03-30T03:22:32+08:00">2021-03-30</time>
+              <time title="创建时间：2021-03-30 03:22:32" itemprop="dateCreated datePublished" datetime="2021-03-30T03:22:32+08:00">2021-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-01 09:23:15" itemprop="dateModified" datetime="2021-04-01T09:23:15+08:00">2021-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-MySQL/" itemprop="url" rel="index"><span itemprop="name">数据库-MySQL</span></a>
+                </span>
             </span>
 
           
@@ -203,16 +220,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Spring-JDBC-Template"><a href="#Spring-JDBC-Template" class="headerlink" title="Spring JDBC Template"></a>Spring JDBC Template</h1><h2 id="1-主要方法："><a href="#1-主要方法：" class="headerlink" title="1.  主要方法："></a>1.  主要方法：</h2><ul>
+        <h3 id="1-主要方法："><a href="#1-主要方法：" class="headerlink" title="1.  主要方法："></a>1.  主要方法：</h3><ul>
 <li>update()：执行DML语句</li>
 <li>queryForMap()：只能返回长度为1的map</li>
-<li>queryForList()：返回多条结果用这个</li>
+<li>queryForList()：返回多条结果用这个<span id="more"></span></li>
 <li>query()：查询结果并将结果封装为JavaBean对象。（别问，问就是前面的不好用，用这个）</li>
-<li>queryForObject()：<h2 id="2-使用："><a href="#2-使用：" class="headerlink" title="2. 使用："></a>2. 使用：</h2><h3 id="1-加载jar包（本文中使用mavem）在pom-xml文件中加入"><a href="#1-加载jar包（本文中使用mavem）在pom-xml文件中加入" class="headerlink" title="1. 加载jar包（本文中使用mavem）在pom.xml文件中加入"></a>1. 加载jar包（本文中使用mavem）在pom.xml文件中加入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">       &lt;groupId&gt;org.springframework&lt;&#x2F;groupId&gt;</span><br><span class="line">       &lt;artifactId&gt;spring-jdbc&lt;&#x2F;artifactId&gt;</span><br><span class="line">       &lt;version&gt;4.2.5.RELEASE&lt;&#x2F;version&gt;</span><br><span class="line">       &lt;scope&gt;compile&lt;&#x2F;scope&gt;</span><br><span class="line">   &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2-创建对象"><a href="#2-创建对象" class="headerlink" title="2. 创建对象"></a>2. 创建对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JdbcTemplate jdbcTemplate &#x3D; new JdbcTemplate(JDBCUtils.getDateSource());</span><br></pre></td></tr></table></figure>
-<h3 id="3-调用方法："><a href="#3-调用方法：" class="headerlink" title="3. 调用方法："></a>3. 调用方法：</h3></li>
+<li>queryForObject()：<h3 id="2-使用："><a href="#2-使用：" class="headerlink" title="2. 使用："></a>2. 使用：</h3></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*编写sql语句*&#x2F;</span><br><span class="line">String sql &#x3D; &quot;update user set password &#x3D; 123456 where id &#x3D; ? &quot;;</span><br><span class="line">&#x2F;*执行*&#x2F;</span><br><span class="line">&#x2F;*queryForMap()*&#x2F;</span><br><span class="line">   Map&lt;String, Object&gt; stringObjectMap &#x3D; jdbcTemplate.queryForMap(sql,&quot;?的值&quot;);</span><br><span class="line">   </span><br><span class="line">   &#x2F;*queryForList()*&#x2F;</span><br><span class="line">   List&lt;Map&lt;String, Object&gt;&gt; maps &#x3D; jdbcTemplate.queryForList(sql, &quot;?的值&quot;);</span><br><span class="line">   </span><br><span class="line">   &#x2F;*queryForObject()*&#x2F;</span><br><span class="line">   &#x2F;*自定义返回值*&#x2F;</span><br><span class="line">   jdbcTemplate.queryForObject(sql,long.class);</span><br><span class="line">   </span><br><span class="line">   &#x2F;*query()*&#x2F;</span><br><span class="line">   &#x2F;*直接赋值，要注意数据库查询的列名与实体类的属性名一致.</span><br><span class="line">   Java属性的命名应遵循camelCase风格，如：myPassword</span><br><span class="line">   * 对应的数据库命名可以为 my_password 或 mypassword*&#x2F;</span><br><span class="line">   List&lt;User&gt; userList &#x3D; jdbcTemplate.query(sql, new BeanPropertyRowMapper&lt;User&gt;(User.class));</span><br><span class="line"></span><br><span class="line">   &#x2F;*如果名字不一致，定义一个新的类来重写自己的规则*&#x2F;</span><br><span class="line">   List&lt;User&gt; userList1 &#x3D; jdbcTemplate.query(sql, new RowMapper&lt;User&gt;() &#123;</span><br><span class="line">       @Override</span><br><span class="line">       public User mapRow(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">           User user &#x3D; new User();</span><br><span class="line">           user.setId(resultSet.getInt(&quot;id&quot;));</span><br><span class="line">           user.setUsername(resultSet.getString(&quot;username&quot;));</span><br><span class="line">           user.setPassword(resultSet.getString(&quot;password&quot;));</span><br><span class="line">           return user;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol>
+<li>加载jar包（本文中使用mavem）在pom.xml文件中加入  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">       &lt;groupId&gt;org.springframework&lt;&#x2F;groupId&gt;</span><br><span class="line">       &lt;artifactId&gt;spring-jdbc&lt;&#x2F;artifactId&gt;</span><br><span class="line">       &lt;version&gt;4.2.5.RELEASE&lt;&#x2F;version&gt;</span><br><span class="line">       &lt;scope&gt;compile&lt;&#x2F;scope&gt;</span><br><span class="line">   &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure></li>
+<li>创建对象<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JdbcTemplate jdbcTemplate &#x3D; new JdbcTemplate(JDBCUtils.getDateSource());</span><br></pre></td></tr></table></figure></li>
+<li>调用方法：  </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*编写sql语句*&#x2F;</span><br><span class="line">String sql &#x3D; &quot;update user set password &#x3D; 123456 where id &#x3D; ? &quot;;</span><br><span class="line">&#x2F;*执行*&#x2F;</span><br><span class="line">&#x2F;*queryForMap()*&#x2F;</span><br><span class="line">Map&lt;String, Object&gt; stringObjectMap &#x3D; jdbcTemplate.queryForMap(sql,&quot;?的值&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;*queryForList()*&#x2F;</span><br><span class="line">List&lt;Map&lt;String, Object&gt;&gt; maps &#x3D; jdbcTemplate.queryForList(sql, &quot;?的值&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;*queryForObject()*&#x2F;</span><br><span class="line">&#x2F;*自定义返回值*&#x2F;</span><br><span class="line">jdbcTemplate.queryForObject(sql,long.class);</span><br><span class="line"></span><br><span class="line">&#x2F;*query()*&#x2F;</span><br><span class="line">&#x2F;*直接赋值，要注意数据库查询的列名与实体类的属性名一致.</span><br><span class="line">Java属性的命名应遵循camelCase风格，如：myPassword</span><br><span class="line">* 对应的数据库命名可以为 my_password 或 mypassword*&#x2F;</span><br><span class="line">List&lt;User&gt; userList &#x3D; jdbcTemplate.query(sql, new BeanPropertyRowMapper&lt;User&gt;(User.class));</span><br><span class="line"></span><br><span class="line">&#x2F;*如果名字不一致，定义一个新的类来重写自己的规则*&#x2F;</span><br><span class="line">List&lt;User&gt; userList1 &#x3D; jdbcTemplate.query(sql, new RowMapper&lt;User&gt;() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public User mapRow(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">        User user &#x3D; new User();</span><br><span class="line">        user.setId(resultSet.getInt(&quot;id&quot;));</span><br><span class="line">        user.setUsername(resultSet.getString(&quot;username&quot;));</span><br><span class="line">        user.setPassword(resultSet.getString(&quot;password&quot;));</span><br><span class="line">        return user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -238,6 +258,10 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+              <a href="/tags/JDBC/" rel="tag"># JDBC</a>
+          </div>
 
         
 
@@ -310,7 +334,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-JDBC-Template"><span class="nav-number">1.</span> <span class="nav-text">Spring JDBC Template</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">1.  主要方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">2. 使用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8A%A0%E8%BD%BDjar%E5%8C%85%EF%BC%88%E6%9C%AC%E6%96%87%E4%B8%AD%E4%BD%BF%E7%94%A8mavem%EF%BC%89%E5%9C%A8pom-xml%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8A%A0%E5%85%A5"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 加载jar包（本文中使用mavem）在pom.xml文件中加入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 创建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 调用方法：</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">1.  主要方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">2. 使用：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -333,13 +357,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
