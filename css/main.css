@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #582f8f;
+  background: #00c1ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1731,7 +1731,7 @@ pre .javascript .function {
 .post-body iframe,
 .post-body img,
 .post-body video {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .post-body .video-container {
   height: 0;
