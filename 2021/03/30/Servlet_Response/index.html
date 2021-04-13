@@ -241,17 +241,18 @@
 <li>格式</li>
 <li>设置状态码  <code>response.setStatus(302);</code><span id="more"></span></li>
 </ul>
-<ol start="2">
+<ol>
 <li>设置响应头   </li>
 </ol>
 <ul>
-<li><code>response.setHeader(&quot;location&quot;,&quot;/demo1&quot;); </code>  </li>
+<li><code>response.setHeader(&quot;location&quot;,&quot;/demo1&quot;);</code>  </li>
 </ul>
-<ol start="3">
+<ol>
 <li>设置响应体<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*输出字符流数据*&#x2F;</span><br><span class="line">PrintWriter writer &#x3D; response.getWriter();</span><br><span class="line">writer.write(&quot;hello response哈哈哈&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;*输出字节流数据*&#x2F;</span><br><span class="line">ServletOutputStream outputStream &#x3D; response.getOutputStream();</span><br><span class="line">outputStream.write(&quot;hello world 哈哈哈&quot;.getBytes(StandardCharsets.UTF_8));</span><br><span class="line"></span><br><span class="line">&#x2F;*输出字节流数据-图片*&#x2F;</span><br><span class="line">int height &#x3D; 200;</span><br><span class="line">int width &#x3D; 200;</span><br><span class="line">BufferedImage bufferedImage &#x3D; new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);</span><br><span class="line">ImageIO.write(bufferedImage,&quot;hello&quot;,response.getOutputStream());</span><br></pre></td></tr></table></figure>
 <h2 id="常用功能"><a href="#常用功能" class="headerlink" title="常用功能"></a>常用功能</h2></li>
 <li>重定向<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">response.setStatus(302);</span><br><span class="line">   response.setHeader(&quot;location&quot;,&quot;&#x2F;demo1&quot;);</span><br><span class="line">   &#x2F;*简化代码*&#x2F;</span><br><span class="line">   response.sendRedirect(&quot;&#x2F;demo1&quot;);</span><br><span class="line">&#x2F;*书写路径时要注意绝对路径和相对路径的区别，使用绝对路径时使用动态获取*&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li>编码设置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*设置输出流的编码*&#x2F;</span><br><span class="line">   response.setCharacterEncoding(&quot;GBK&quot;);</span><br><span class="line">&#x2F;*设置Content-Type 设置的编码对服务器和客户端双向影响*&#x2F;</span><br><span class="line">   response.setContentType(&quot;text&#x2F;html;charset&#x3D;utf-8&quot;);</span><br></pre></td></tr></table></figure></li>
+<li>编码设置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*设置输出流的编码*&#x2F;</span><br><span class="line">   response.setCharacterEncoding(&quot;GBK&quot;);</span><br><span class="line">&#x2F;*设置Content-Type 设置的编码对服务器和客户端双向影响*&#x2F;</span><br><span class="line">   response.setContentType(&quot;text&#x2F;html;charset&#x3D;utf-8&quot;);</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 
     </div>
@@ -466,6 +467,8 @@
 
 
 
+
+  
 
   
 

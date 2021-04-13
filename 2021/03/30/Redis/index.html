@@ -255,8 +255,8 @@
 <li>列表优点：保存元素顺序，快速访问顶部或底部元素<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2></li>
 <li>向集合中放入元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SADD color &quot;green&quot;</span><br><span class="line">SADD color &quot;black&quot; &quot;red&quot;</span><br></pre></td></tr></table></figure></li>
 <li>从集合中删除元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SREM color &quot;green&quot;</span><br><span class="line">&#x2F;*返回1表示存在，返回0表示不存在*&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li>检查集合中是否存在元素： <code>SISMEMBER color &quot;red&quot; /*返回1表示存在，返回0表示不存在*/ </code></li>
-<li>检索集合中的全部元素：<code> SMEMBERS color</code></li>
+<li>检查集合中是否存在元素： <code>SISMEMBER color &quot;red&quot; /*返回1表示存在，返回0表示不存在*/</code></li>
+<li>检索集合中的全部元素：<code>SMEMBERS color</code></li>
 <li>检索多个集合中的元素：<code>SUNION color color2</code></li>
 <li>删除随机元素并返回：<code>SPOP color 3</code></li>
 <li>集合优点：集合中可以快速测试成员资格，但元素间没有特定的顺序<h2 id="排序集"><a href="#排序集" class="headerlink" title="排序集"></a>排序集</h2></li>
@@ -266,7 +266,8 @@
 </ul>
 <h2 id="哈希（map）"><a href="#哈希（map）" class="headerlink" title="哈希（map）"></a>哈希（map）</h2><ul>
 <li>放入数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HSET user:1000 name &quot;John Smith&quot;</span><br><span class="line">   HSET user:1000 email &quot;john.smith@example.com&quot;</span><br><span class="line">   HSET user:1000 password &quot;s3cret&quot;</span><br><span class="line"></span><br><span class="line">HMSET user:1001 name &quot;Mary&quot; password &quot;hidden&quot; email &quot;xxx.com&quot;</span><br></pre></td></tr></table></figure></li>
-<li>获取键对<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HGETALL user:1000&#x2F;*获取全部键对*&#x2F;</span><br><span class="line"></span><br><span class="line">HGET user:1001&#x2F;*获取单个键对*&#x2F;</span><br></pre></td></tr></table></figure></li>
+<li>获取键对<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HGETALL user:1000&#x2F;*获取全部键对*&#x2F;</span><br><span class="line"></span><br><span class="line">HGET user:1001&#x2F;*获取单个键对*&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><ul>
 <li>默认持久化：BDR<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*编辑redis.windows.conf文件*&#x2F;</span><br><span class="line">save 60 10 每60秒如果有10个键改变，持久化一次</span><br><span class="line">&#x2F;*启动服务器*&#x2F;</span><br><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></li>
@@ -483,6 +484,8 @@
 
 
 
+
+  
 
   
 

@@ -20,14 +20,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="题目Fast Fourier Transformation快速多项式乘法 解题分析多项式的多种表示方法：A(x)&#x3D;  x&#x3D;\frac{-b\pm\sqrt{b^2-4ac}}{2a} 系数表示法">
+<meta property="og:type" content="article">
 <meta property="og:title" content="The fast Fourier transform-快速傅立叶变换-分治法-算法系列NO.2">
 <meta property="og:url" content="http://example.com/2021/04/02/The-fast-Fourier-transform-%E5%BF%AB%E9%80%9F%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2-%E5%88%86%E6%B2%BB%E6%B3%95-%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97NO-2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="题目Fast Fourier Transformation快速多项式乘法 解题分析多项式的多种表示方法：A(x)&#x3D;  x&#x3D;\frac{-b\pm\sqrt{b^2-4ac}}{2a} 系数表示法">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-02T13:04:45.000Z">
-<meta property="article:modified_time" content="2021-04-02T13:04:45.583Z">
+<meta property="article:modified_time" content="2021-04-13T06:23:37.000Z">
 <meta property="article:author" content="loner John">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="分治法">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2021/04/02/The-fast-Fourier-transform-%E5%BF%AB%E9%80%9F%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2-%E5%88%86%E6%B2%BB%E6%B3%95-%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97NO-2/">
@@ -188,6 +192,26 @@
 
               <time title="创建时间：2021-04-02 21:04:45" itemprop="dateCreated datePublished" datetime="2021-04-02T21:04:45+08:00">2021-04-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-13 14:23:37" itemprop="dateModified" datetime="2021-04-13T14:23:37+08:00">2021-04-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97/" itemprop="url" rel="index"><span itemprop="name">算法系列</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97/%E5%88%86%E6%B2%BB%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">分治法</span></a>
+                </span>
+            </span>
 
           
   
@@ -214,7 +238,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>Fast Fourier Transformation<br>快速多项式乘法</p>
+<h1 id="解题分析"><a href="#解题分析" class="headerlink" title="解题分析"></a>解题分析</h1><h4 id="多项式的多种表示方法："><a href="#多项式的多种表示方法：" class="headerlink" title="多项式的多种表示方法："></a>多项式的多种表示方法：</h4><p>A(x)= </p>
+<script type="math/tex; mode=display">x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</script><ul>
+<li>系数表示法</li>
+</ul>
+
     </div>
 
     
@@ -239,6 +268,10 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/%E5%88%86%E6%B2%BB%E6%B3%95/" rel="tag"># 分治法</a>
+          </div>
 
         
 
@@ -309,6 +342,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">解题分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%9A%84%E5%A4%9A%E7%A7%8D%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">多项式的多种表示方法：</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -421,6 +455,63 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

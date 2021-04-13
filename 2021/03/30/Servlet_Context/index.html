@@ -243,11 +243,13 @@
 </ul>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul>
 <li><p>获取该对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*通过request对象获取*&#x2F;</span><br><span class="line">ServletContext servletContext &#x3D; request.getServletContext();</span><br><span class="line">&#x2F;*通过HttpServlet获取*&#x2F;</span><br><span class="line">ServletContext servletContext1 &#x3D; this.getServletContext();</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*通过request对象获取*&#x2F;</span><br><span class="line">ServletContext servletContext &#x3D; request.getServletContext();</span><br><span class="line">&#x2F;*通过HttpServlet获取*&#x2F;</span><br><span class="line">ServletContext servletContext1 &#x3D; this.getServletContext();</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>操作<br>获取MIME类型： <code>String mimeType = servletContext.getMimeType(&quot;a.jpg&quot;);</code><br>域对象相关操作：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*设置*&#x2F;</span><br><span class="line">servletContext.setAttribute(&quot;code&quot;,&quot;123456&quot;);</span><br><span class="line">&#x2F;*获取*&#x2F;</span><br><span class="line">Object code &#x3D; servletContext.getAttribute(&quot;code&quot;);</span><br><span class="line">&#x2F;*移除*&#x2F;</span><br><span class="line">servletContext.removeAttribute(&quot;code&quot;);</span><br></pre></td></tr></table></figure>
 <p>获取资源文件的真实路径：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*web目录下资源访问*&#x2F;</span><br><span class="line">String b &#x3D; servletContext.getRealPath(&quot;&#x2F;b.txt&quot;);</span><br><span class="line">&#x2F;*WEB-INF目录下的资源访问*&#x2F;</span><br><span class="line">String c &#x3D; servletContext.getRealPath(&quot;&#x2F;WEB-INF&#x2F;c.txt&quot;);</span><br><span class="line">&#x2F;*src目录下的资源访问*&#x2F;</span><br><span class="line">String a &#x3D; servletContext.getRealPath(&quot;&#x2F;WEB-INF&#x2F;classes&#x2F;a.txt&quot;);</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*web目录下资源访问*&#x2F;</span><br><span class="line">String b &#x3D; servletContext.getRealPath(&quot;&#x2F;b.txt&quot;);</span><br><span class="line">&#x2F;*WEB-INF目录下的资源访问*&#x2F;</span><br><span class="line">String c &#x3D; servletContext.getRealPath(&quot;&#x2F;WEB-INF&#x2F;c.txt&quot;);</span><br><span class="line">&#x2F;*src目录下的资源访问*&#x2F;</span><br><span class="line">String a &#x3D; servletContext.getRealPath(&quot;&#x2F;WEB-INF&#x2F;classes&#x2F;a.txt&quot;);</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
     </div>
@@ -462,6 +464,8 @@
 
 
 
+
+  
 
   
 

@@ -186,6 +186,26 @@
 
               <time title="创建时间：2021-04-02 21:04:45" itemprop="dateCreated datePublished" datetime="2021-04-02T21:04:45+08:00">2021-04-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-13 14:23:37" itemprop="dateModified" datetime="2021-04-13T14:23:37+08:00">2021-04-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97/" itemprop="url" rel="index"><span itemprop="name">算法系列</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97/%E5%88%86%E6%B2%BB%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">分治法</span></a>
+                </span>
+            </span>
 
           
   
@@ -212,7 +232,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>Fast Fourier Transformation<br>快速多项式乘法</p>
+<h1 id="解题分析"><a href="#解题分析" class="headerlink" title="解题分析"></a>解题分析</h1><h4 id="多项式的多种表示方法："><a href="#多项式的多种表示方法：" class="headerlink" title="多项式的多种表示方法："></a>多项式的多种表示方法：</h4><p>A(x)= </p>
+<script type="math/tex; mode=display">x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</script><ul>
+<li>系数表示法</li>
+</ul>
+
       
     </div>
 
@@ -304,7 +329,7 @@
 
       
           <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Given a set S of n points in the plane (n is power of 2), c1=(x1, y1), c2=(x2, y2), …, cn=(xn, yn),  where the points are ordered in ascending order of their x coordinates,  find a pair points with closed instance. </p>
-<p>给出一组点c1=(x1, y1), c2=(x2, y2), …, cn=(xn, yn)，找出他们之间距离最近的两个点，其中点<strong>ci的坐标xi按升序排列</strong>。</p>
+<p>给出一组点c1=(x1, y1), c2=(x2, y2), …, cn=(xn, yn)，找出他们之间距离最近的两个点，其中点<strong>ci的坐标xi按升序排列</strong>。<br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/01/Closest-pair-of-points-%E6%9C%80%E8%BF%91%E7%82%B9%E9%97%AE%E9%A2%98-%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97NO-1/#more" rel="contents">
@@ -384,7 +409,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/01/hello-world/#more" rel="contents">
@@ -1068,7 +1093,7 @@
       
           <p> 概述：一个可以简化封装数据时繁琐操作的工具类</p>
 <h3 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h3><ol>
-<li> 加载jar包（本文使用maven）在pom文件中加入</li></ol>
+<li>加载jar包（本文使用maven）在pom文件中加入</li></ol>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/30/BeanUtils/#more" rel="contents">
@@ -1259,6 +1284,63 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
